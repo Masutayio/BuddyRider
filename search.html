@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuddyRider - Recherche de Pilote/Passager</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="search.css">
+</head>
+<body>
+    <!-- Menu de navigation -->
+    <header>
+        <div class="hamburger" id="hamburger">
+            &#9776; <!-- Icône hamburger -->
+        </div>
+        <nav id="menu" class="hidden">
+            <ul>
+                <li><a href="homepage.html">Accueil</a></li>
+                <li><a href="profile.html">Création de Profil</a></li>
+                <li><a href="search.html">Recherche Pilote/Passager</a></li>
+                <li><a href="messagerie.html">Messagerie</a></li>
+                <li><hr></li> <!-- Ligne de séparation -->
+                <li><a href="#" id="logout-btn" class="logout-btn">Déconnexion</a></li> <!-- Bouton de déconnexion -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenu de la page de recherche -->
+    <div class="container">
+        <h1>Recherche de Pilote ou Passager</h1>
+
+        <form id="search-form">
+            <label for="role">Je suis :</label>
+            <select id="role" name="role" required>
+                <option value="" disabled selected>Sélectionnez votre rôle</option>
+                <option value="pilot">Pilote</option>
+                <option value="passenger">Passager</option>
+            </select>
+
+            <div id="pilot-fields" class="hidden">
+                <label for="moto-type-pilot">Type de moto :</label>
+                <select id="moto-type-pilot" name="moto-type-pilot">
+                    <option value="" disabled selected>Sélectionnez votre type de moto</option>
+                    <option value="routière">Routière</option>
+                    <option value="gt">GT</option>
+                    <option value="trail">Trail</option>
+                    <option value="sportive">Sportive</option>
+                    <option value="roadster">Roadster</option>
+                    <option value="custom">Custom</option>
+                </select>
+
+                <label for="driving-style-pilot">Style de conduite :</label>
+                <select id="driving-style-pilot" name="driving-style-pilot">
+                    <option value="" disabled selected>Sélectionnez votre style de conduite</option>
+                    <option value="calme">Calme</option>
+                    <option value="sportif">Sportif</option>
+                    <option value="agressif">Agressif</option>
+                </select>
+
+                <label for="department-pilot">Département :</label>
+                <select id="department-pilot" name="department-pilot" required>
+                    <option value="" disabled selected>Sélectionnez votre département</option>
+                </select>
+            </div>
+
+            <div id="passenger-fields" class="hidden">
+                <label for="department-passenger">Département :</label>
+                <select id="department-passenger" name="department-passenger" required>
+                    <option value="" disabled selected>Sélectionnez votre département</option>
+                </select>
+
+                <label for="age-passenger">Tranche d'âge (optionnel) :</label>
+                <select id="age-passenger" name="age-passenger">
+                    <option value="" disabled selected>Sélectionnez une tranche d'âge</option>
+                    <option value="18-30">18-30 ans</option>
+                    <option value="31-50">31-50 ans</option>
+                    <option value="51-99">51 ans et plus</option>
+                </select>
+
+                <label for="gender-passenger">Sexe (optionnel) :</label>
+                <select id="gender-passenger" name="gender-passenger">
+                    <option value="" disabled selected>Sélectionnez un sexe</option>
+                    <option value="male">Homme</option>
+                    <option value="female">Femme</option>
+                </select>
+
+                <label for="moto-type-passenger">Type de moto acceptée (optionnel) :</label>
+                <select id="moto-type-passenger" name="moto-type-passenger">
+                    <option value="" disabled selected>Sélectionnez le type de moto</option>
+                    <option value="routière">Routière</option>
+                    <option value="gt">GT</option>
+                    <option value="trail">Trail</option>
+                    <option value="sportive">Sportive</option>
+                    <option value="roadster">Roadster</option>
+                    <option value="custom">Custom</option>
+                </select>
+
+                <label for="driving-style-passenger">Style de conduite recherché :</label>
+                <select id="driving-style-passenger" name="driving-style-passenger">
+                    <option value="" disabled selected>Sélectionnez le style de conduite recherché</option>
+                    <option value="calme">Calme</option>
+                    <option value="sportif">Sportif</option>
+                    <option value="agressif">Agressif</option>
+                </select>
+            </div>
+
+            <button type="submit" class="submit-btn">Rechercher</button>
+        </form>
+    </div>
+
+    <script src="search.js"></script>
+</body>
+</html>

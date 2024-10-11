@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuddyRider - Création de Profil</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <!-- Menu de navigation -->
+    <header>
+        <div class="hamburger" id="hamburger">
+            &#9776; <!-- Icône hamburger -->
+        </div>
+        <nav id="menu" class="hidden">
+            <ul>
+                <li><a href="homepage.html">Accueil</a></li>
+                <li><a href="profile.html">Création de Profil</a></li>
+                <li><a href="search.html">Recherche Pilote/Passager</a></li>
+                <li><a href="messagerie.html">Messagerie</a></li>
+                <li><hr></li> <!-- Ligne de séparation -->
+                <li><a href="#" id="logout-btn" class="logout-btn">Déconnexion</a></li> <!-- Bouton de déconnexion -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenu de la page de création de profil -->
+    <div class="container">
+        <h1>Création de Profil</h1>
+
+        <form id="profile-form">
+            <label for="pseudo">Pseudo :</label>
+            <input type="text" id="pseudo" name="pseudo" required>
+
+            <label for="age">Âge :</label>
+            <select id="age" name="age" required>
+                <option value="" disabled selected>Sélectionnez votre âge</option>
+                <!-- Ajout des âges de 18 à 99 -->
+                <script>
+                    for (let i = 18; i <= 99; i++) {
+                        document.write(`<option value="${i}">${i} ans</option>`);
+                    }
+                </script>
+            </select>
+
+            <label for="department">Département :</label>
+            <select id="department" name="department" required>
+                <option value="" disabled selected>Sélectionnez votre département</option>
+                <!-- Liste des départements de 01 à 97 -->
+                <script>
+                    for (let i = 1; i <= 97; i++) {
+                        document.write(`<option value="${i.toString().padStart(2, '0')}">${i.toString().padStart(2, '0')}</option>`);
+                    }
+                </script>
+            </select>
+
+            <label for="moto-type">Type de moto :</label>
+            <select id="moto-type" name="moto-type" required>
+                <option value="" disabled selected>Sélectionnez votre type de moto</option>
+                <option value="routière">Routière</option>
+                <option value="gt">GT</option>
+                <option value="trail">Trail</option>
+                <option value="sportive">Sportive</option>
+                <option value="roadster">Roadster</option>
+                <option value="custom">Custom</option>
+            </select>
+
+            <label for="driving-preferences">Préférences de conduite :</label>
+            <textarea id="driving-preferences" name="driving-preferences" rows="4" placeholder="Décrivez vos préférences de conduite..."></textarea>
+
+            <label for="moto-photo">Télécharger une photo de votre moto :</label>
+            <input type="file" id="moto-photo" name="moto-photo" accept="image/*">
+
+            <button type="submit" class="submit-btn">Créer Profil</button>
+        </form>
+    </div>
+
+    <script src="profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+/* Styles pour le menu hamburger */
+header {
+    background-color: #007BFF;
+    padding: 10px;
+    position: relative;
+}
+
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    text-align: left;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+#menu {
+    background-color: #007BFF;
+    padding: 10px;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 200px;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Styles pour la page de création de profil */
+.container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="file"], select {
+    width: calc(100% - 10px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Styles pour le bouton de déconnexion */
+.logout-btn {
+    color: white;
+    background-color: red; /* Couleur rouge pour la déconnexion */
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.logout-btn:hover {
+    background-color: darkred; /* Couleur sombre au survol */
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}

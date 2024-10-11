@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuddyRider - Accueil</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="messagerie.css">
+</head>
+<body>
+    <header>
+        <div class="hamburger" id="hamburger">
+            &#9776; <!-- Icône hamburger -->
+        </div>
+        <nav id="menu" class="hidden">
+            <ul>
+                <li><a href="homepage.html">Accueil</a></li>
+                <li><a href="profile.html">Création de Profil</a></li>
+                <li><a href="search.html">Recherche Pilote/Passager</a></li>
+                <li><a href="messagerie.html">Messagerie</a></li>
+                <li><hr></li> <!-- Ligne de séparation -->
+                <li><a href="#" id="logout-btn" class="logout-btn">Déconnexion</a></li> <!-- Bouton de déconnexion -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="messaging-container" class="messaging-container">
+            <h2>Messagerie</h2>
+            <div id="message-list" class="message-list"></div>
+            <div class="message-input">
+        <input type="text" id="message-input" placeholder="Écrivez un message..." />
+        <button id="send-button">Envoyer</button>
+    </div>
+</div>
+
+<script src="homepage.js"></script>
+
+</body>
+</html>

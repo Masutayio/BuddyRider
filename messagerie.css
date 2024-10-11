@@ -1,0 +1,105 @@
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    text-align: left;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+#menu {
+    background-color: #007BFF;
+    padding: 10px;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 200px;
+    border-radius: 5px;
+}
+header {
+    background-color: #007BFF;
+    padding: 10px;
+    position: relative;
+}
+/* CSS pour la messagerie */
+.messaging-container {
+    max-width: 600px; /* Limite la largeur de la messagerie */
+    margin: 20px auto; /* Centre la section */
+    padding: 20px; /* Espacement intérieur */
+    background-color: #f8f9fa; /* Couleur de fond claire */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour profondeur */
+}
+
+.messaging-container h2 {
+    font-size: 1.5em; /* Taille du titre */
+    margin-bottom: 15px; /* Espace sous le titre */
+}
+
+.message-list {
+    max-height: 400px; /* Limite la hauteur de la liste de messages */
+    overflow-y: auto; /* Ajoute le défilement vertical si nécessaire */
+    margin-bottom: 15px; /* Espace en bas de la liste */
+    border: 1px solid #ddd; /* Bordure autour de la liste */
+    padding: 10px; /* Espacement intérieur */
+}
+
+.message-input {
+    display: flex; /* Utilisation de flexbox pour aligner les éléments */
+}
+
+.message-input input {
+    flex: 1; /* L'input prend tout l'espace disponible */
+    padding: 10px; /* Espacement intérieur */
+    border: 1px solid #ddd; /* Bordure de l'input */
+    border-radius: 4px; /* Coins arrondis */
+}
+
+.message-input button {
+    padding: 10px 15px; /* Espacement intérieur */
+    margin-left: 10px; /* Espace à gauche du bouton */
+    background-color: #007bff; /* Couleur du bouton */
+    color: #fff; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 4px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointer pour le bouton */
+}
+
+.message-input button:hover {
+    background-color: #0056b3; /* Couleur au survol */
+}
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Styles pour le bouton de déconnexion */
+.logout-btn {
+    color: white;
+    background-color: red; /* Couleur rouge pour la déconnexion */
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.logout-btn:hover {
+    background-color: darkred; /* Couleur sombre au survol */
+}
