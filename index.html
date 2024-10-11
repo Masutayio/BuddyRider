@@ -3,50 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BuddyRider - Connexion / Inscription</title>
+    <title>BuddyRider - Connexion/Inscription</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
     <div class="container">
         <h1>Bienvenue sur BuddyRider</h1>
+
+        <!-- Boutons de Connexion/Inscription -->
         <div class="buttons">
             <button id="login-btn">Connexion</button>
             <button id="signup-btn">Inscription</button>
         </div>
 
-        <div id="login-form" class="form hidden">
+        <!-- Formulaire de Connexion -->
+        <div id="login-form" class="form">
             <h2>Connexion</h2>
-            <form id="login" action="#">
-                <label for="login-username">Pseudo</label>
-                <input type="text" id="login-username" required>
-                
-                <label for="login-password">Mot de passe</label>
-                <input type="password" id="login-password" required>
-                
-                <button type="submit">Se connecter</button>
+            <form>
+                <label for="login-pseudo">Pseudo :</label>
+                <input type="text" id="login-pseudo" placeholder="Entrez votre pseudo" required>
+
+                <label for="login-password">Mot de passe :</label>
+                <input type="password" id="login-password" placeholder="Entrez votre mot de passe" required>
+
+                <button type="submit" id="submit-login">Se connecter</button>
             </form>
-            <p>Pas encore de compte ? <a href="#" id="show-signup">Inscrivez-vous</a></p>
         </div>
 
-        <div id="signup-form" class="form hidden">
+        <!-- Formulaire d'Inscription -->
+        <div id="signup-form" class="form">
             <h2>Inscription</h2>
-            <form id="signup" action="#">
-                <label for="signup-email">Adresse email</label>
-                <input type="email" id="signup-email" required>
-                
-                <label for="signup-username">Pseudo</label>
-                <input type="text" id="signup-username" required>
+            <form>
+                <label for="signup-email">Email :</label>
+                <input type="email" id="signup-email" placeholder="Entrez votre adresse email" required>
 
-                <label for="signup-password">Mot de passe</label>
-                <input type="password" id="signup-password" required>
-                
-                <button type="submit">S'inscrire</button>
+                <label for="signup-pseudo">Pseudo :</label>
+                <input type="text" id="signup-pseudo" placeholder="Choisissez un pseudo" required>
+
+                <label for="signup-password">Mot de passe :</label>
+                <input type="password" id="signup-password" placeholder="Choisissez un mot de passe" required>
+
+                <button type="submit" id="submit-signup">S'inscrire</button>
             </form>
-            <p>Déjà un compte ? <a href="#" id="show-login">Connectez-vous</a></p>
         </div>
     </div>
 
-    <script src="app.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>

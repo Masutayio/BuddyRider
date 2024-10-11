@@ -78,78 +78,20 @@ nav {
 }
 
 .container {
-        text-align: center;
-        background-color: white;
-        padding: 40px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-.container label {
-    font-weight: bold;
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.container input[type="text"],
-.container input[type="file"],
-.container select {
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    width: 100%;
-}
-
-.container button {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.container button:hover {
-    background-color: #0056b3;
-}
-
-img {
-    max-width: 200px;
-    margin-top: 10px;
-}.navbar {
-    display: none; /* Masque par défaut */
-}
-
-.navbar.show {
-    display: block; /* Affiche lorsque la classe 'show' est ajoutée */
-}
-#messages {
-    width: 100%; /* Prend toute la largeur disponible */
-    max-width: 600px; /* Largeur maximale pour le conteneur de messages */
-    margin: 20px auto; /* Centrer le conteneur sur la page */
-}
-
-.message {
-    display: flex;
-    flex-direction: column; /* Affiche le contenu verticalement */
-    margin-bottom: 10px; /* Espacement entre les messages */
-    padding: 10px; /* Espacement intérieur */
+.notification {
+    background-color: #e9ecef; /* Couleur de fond pour les notifications */
+    padding: 15px;
+    margin: 10px 0; /* Espacement entre les notifications */
     border-radius: 5px; /* Coins arrondis */
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Ombre légère */
-}
-
-.sent {
-    text-align: left;
-    align-self: flex-start; /* Aligne à gauche pour les messages envoyés */
-    background-color: #d1e7dd; /* Couleur de fond pour les messages envoyés */
-}
-
-.received {
-    text-align: right;
-    align-self: flex-end; /* Aligne à droite pour les messages reçus */
-    background-color: #cfe2ff; /* Couleur de fond pour les messages reçus */
-}
-
-.sender {
-    font-weight: bold; /* Met en gras le nom de l'expéditeur */
+    text-align: left; /* Aligne le texte à gauche */
 }
 
 .timestamp {

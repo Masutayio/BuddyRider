@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche - BuddyRider</title>
+    <link rel="stylesheet" href="recherche.css">
+</head>
+<body>
+    <nav>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <div class="hamburger-bar"></div>
+            <div class="hamburger-bar"></div>
+            <div class="hamburger-bar"></div>
+        </div>
+        <div class="menu" id="menu">
+            <ul>
+                <li><a href="accueil.html">Accueil</a></li>
+                <li><a href="profile.html">Profil</a></li>
+                <li><a href="recherche.html">Recherche de pilote</a></li>
+                <li><a href="messagerie.html">Messagerie</a></li>
+                <li><a href="notifications.html">Notifications</a></li>
+                <li class="logout"><a href="index.html">Déconnexion</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <h1>Recherche</h1>
+        <form id="searchForm">
+            <div>
+                <label for="userType">Je suis :</label>
+                <select id="userType" required>
+                    <option value="" disabled selected>Sélectionnez</option>
+                    <option value="pilot">Pilote</option>
+                    <option value="passenger">Passager</option>
+                </select>
+            </div>
+
+            <div id="pilotFields" style="display:none;">
+                <h2>Informations Pilote</h2>
+                <div>
+                    <label for="departementPilot">Département :</label>
+                    <select id="departementPilot" required>
+                        <option value="" disabled selected>Sélectionnez un département</option>
+                        <!-- Liste des départements ici -->
+                        <option value="01">Ain</option>
+                        <option value="02">Aisne</option>
+                        <option value="03">Allier</option>
+                        <option value="04">Alpes-de-Haute-Provence</option>
+                        <option value="05">Hautes-Alpes</option>
+                        <option value="06">Alpes-Maritimes</option>
+                        <option value="07">Ardèche</option>
+                        <option value="08">Ardennes</option>
+                        <option value="09">Ariège</option>
+                        <option value="10">Aube</option>
+                        <option value="11">Aude</option>
+                        <option value="12">Aveyron</option>
+                        <option value="13">Bouches-du-Rhône</option>
+                        <option value="14">Calvados</option>
+                        <option value="15">Cantal</option>
+                        <option value="16">Charente</option>
+                        <option value="17">Charente-Maritime</option>
+                        <option value="18">Cher</option>
+                        <option value="19">Corrèze</option>
+                        <option value="2A">Corse-du-Sud</option>
+                        <option value="2B">Haute-Corse</option>
+                        <option value="20">Collectivité de Corse</option>
+                        <option value="21">Côte-d'Or</option>
+                        <option value="22">Côtes-d'Armor</option>
+                        <option value="23">Creuse</option>
+                        <option value="24">Dordogne</option>
+                        <option value="25">Doubs</option>
+                        <option value="26">Drôme</option>
+                        <option value="27">Eure</option>
+                        <option value="28">Eure-et-Loir</option>
+                        <option value="29">Finistère</option>
+                        <option value="30">Gard</option>
+                        <option value="31">Haute-Garonne</option>
+                        <option value="32">Gers</option>
+                        <option value="33">Gironde</option>
+                        <option value="34">Hérault</option>
+                        <option value="35">Ille-et-Vilaine</option>
+                        <option value="36">Indre</option>
+                        <option value="37">Indre-et-Loire</option>
+                        <option value="38">Isère</option>
+                        <option value="39">Jura</option>
+                        <option value="40">Landes</option>
+                        <option value="41">Loir-et-Cher</option>
+                        <option value="42">Loire</option>
+                        <option value="43">Haute-Loire</option>
+                        <option value="44">Loire-Atlantique</option>
+                        <option value="45">Loiret</option>
+                        <option value="46">Lot</option>
+                        <option value="47">Lot-et-Garonne</option>
+                        <option value="48">Lozère</option>
+                        <option value="49">Maine-et-Loire</option>
+                        <option value="50">Manche</option>
+                        <option value="51">Marne</option>
+                        <option value="52">Haute-Marne</option>
+                        <option value="53">Mayenne</option>
+                        <option value="54">Meurthe-et-Moselle</option>
+                        <option value="55">Meuse</option>
+                        <option value="56">Morbihan</option>
+                        <option value="57">Moselle</option>
+                        <option value="58">Nièvre</option>
+                        <option value="59">Nord</option>
+                        <option value="60">Oise</option>
+                        <option value="61">Orne</option>
+                        <option value="62">Pas-de-Calais</option>
+                        <option value="63">Puy-de-Dôme</option>
+                        <option value="64">Pyrénées-Atlantiques</option>
+                        <option value="65">Hautes-Pyrénées</option>
+                        <option value="66">Pyrénées-Orientales</option>
+                        <option value="67">Bas-Rhin</option>
+                        <option value="68">Haut-Rhin</option>
+                        <option value="69">Rhône</option>
+                        <option value="70">Haute-Saône</option>
+                        <option value="71">Saône-et-Loire</option>
+                        <option value="72">Sarthe</option>
+                        <option value="73">Savoie</option>
+                        <option value="74">Haute-Savoie</option>
+                        <option value="75">Paris</option>
+                        <option value="76">Seine-Maritime</option>
+                        <option value="77">Seine-et-Marne</option>
+                        <option value="78">Yvelines</option>
+                        <option value="79">Deux-Sèvres</option>
+                        <option value="80">Somme</option>
+                        <option value="81">Tarn</option>
+                        <option value="82">Tarn-et-Garonne</option>
+                        <option value="83">Var</option>
+                        <option value="84">Vaucluse</option>
+                        <option value="85">Vendée</option>
+                        <option value="86">Vienne</option>
+                        <option value="87">Haute-Vienne</option>
+                        <option value="88">Vosges</option>
+                        <option value="89">Yonne</option>
+                        <option value="90">Territoire de Belfort</option>
+                        <option value="91">Essonne</option>
+                        <option value="92">Hauts-de-Seine</option>
+                        <option value="93">Seine-Saint-Denis</option>
+                        <option value="94">Val-de-Marne</option>
+                        <option value="95">Val-d'Oise</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="sexePilot">Sexe :</label>
+                    <select id="sexePilot" required>
+                        <option value="" disabled selected>Sélectionnez</option>
+                        <option value="male">Homme</option>
+                        <option value="female">Femme</option>
+                        <option value="other">Autre</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="styleConduite">Style de Conduite du Pilote :</label>
+                    <select id="styleConduite">
+                        <option value="calme">Calme</option>
+                        <option value="sportif">Sportif</option>
+                        <option value="agressif">Agressif</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="styleMotoPilot">Style de moto :</label>
+                    <select id="styleMotoPilot" required>
+                        <option value="" disabled selected>Sélectionnez un style de moto</option>
+                        <option value="gt">GT</option>
+                        <option value="trail">Trail</option>
+                        <option value="custom">Custom</option>
+                        <option value="routière">Routière</option>
+                        <option value="sportive">Sportive</option>
+                        <option value="roadster">Roadster</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="anneeNaissancePilot">Année de naissance :</label>
+                    <select id="anneeNaissancePilot" required>
+                        <option value="" disabled selected>Sélectionnez votre année</option>
+                        <!-- Génération des années de 1940 à 2006 -->
+                        <script>
+                            for (let year = 2006; year >= 1940; year--) {
+                                document.write(`<option value="${year}">${year}</option>`);
+                            }
+                        </script>
+                    </select>
+                </div>
+            </div>
+
+            <div id="passengerFields" style="display:none;">
+                <h2>Informations Passager</h2>
+                <div>
+                    <label for="departementPassenger">Département :</label>
+                    <select id="departementPassenger" required>
+                        <option value="" disabled selected>Sélectionnez un département</option>
+                        <!-- Liste des départements ici (identique à celle pour les pilotes) -->
+                        <option value="01">Ain</option>
+                        <option value="02">Aisne</option>
+                        <option value="03">Allier</option>
+                        <option value="04">Alpes-de-Haute-Provence</option>
+                        <option value="05">Hautes-Alpes</option>
+                        <option value="06">Alpes-Maritimes</option>
+                        <option value="07">Ardèche</option>
+                        <option value="08">Ardennes</option>
+                        <option value="09">Ariège</option>
+                        <option value="10">Aube</option>
+                        <option value="11">Aude</option>
+                        <option value="12">Aveyron</option>
+                        <option value="13">Bouches-du-Rhône</option>
+                        <option value="14">Calvados</option>
+                        <option value="15">Cantal</option>
+                        <option value="16">Charente</option>
+                        <option value="17">Charente-Maritime</option>
+                        <option value="18">Cher</option>
+                        <option value="19">Corrèze</option>
+                        <option value="2A">Corse-du-Sud</option>
+                        <option value="2B">Haute-Corse</option>
+                        <option value="20">Collectivité de Corse</option>
+                        <option value="21">Côte-d'Or</option>
+                        <option value="22">Côtes-d'Armor</option>
+                        <option value="23">Creuse</option>
+                        <option value="24">Dordogne</option>
+                        <option value="25">Doubs</option>
+                        <option value="26">Drôme</option>
+                        <option value="27">Eure</option>
+                        <option value="28">Eure-et-Loir</option>
+                        <option value="29">Finistère</option>
+                        <option value="30">Gard</option>
+                        <option value="31">Haute-Garonne</option>
+                        <option value="32">Gers</option>
+                        <option value="33">Gironde</option>
+                        <option value="34">Hérault</option>
+                        <option value="35">Ille-et-Vilaine</option>
+                        <option value="36">Indre</option>
+                        <option value="37">Indre-et-Loire</option>
+                        <option value="38">Isère</option>
+                        <option value="39">Jura</option>
+                        <option value="40">Landes</option>
+                        <option value="41">Loir-et-Cher</option>
+                        <option value="42">Loire</option>
+                        <option value="43">Haute-Loire</option>
+                        <option value="44">Loire-Atlantique</option>
+                        <option value="45">Loiret</option>
+                        <option value="46">Lot</option>
+                        <option value="47">Lot-et-Garonne</option>
+                        <option value="48">Lozère</option>
+                        <option value="49">Maine-et-Loire</option>
+                        <option value="50">Manche</option>
+                        <option value="51">Marne</option>
+                        <option value="52">Haute-Marne</option>
+                        <option value="53">Mayenne</option>
+                        <option value="54">Meurthe-et-Moselle</option>
+                        <option value="55">Meuse</option>
+                        <option value="56">Morbihan</option>
+                        <option value="57">Moselle</option>
+                        <option value="58">Nièvre</option>
+                        <option value="59">Nord</option>
+                        <option value="60">Oise</option>
+                        <option value="61">Orne</option>
+                        <option value="62">Pas-de-Calais</option>
+                        <option value="63">Puy-de-Dôme</option>
+                        <option value="64">Pyrénées-Atlantiques</option>
+                        <option value="65">Hautes-Pyrénées</option>
+                        <option value="66">Pyrénées-Orientales</option>
+                        <option value="67">Bas-Rhin</option>
+                        <option value="68">Haut-Rhin</option>
+                        <option value="69">Rhône</option>
+                        <option value="70">Haute-Saône</option>
+                        <option value="71">Saône-et-Loire</option>
+                        <option value="72">Sarthe</option>
+                        <option value="73">Savoie</option>
+                        <option value="74">Haute-Savoie</option>
+                        <option value="75">Paris</option>
+                        <option value="76">Seine-Maritime</option>
+                        <option value="77">Seine-et-Marne</option>
+                        <option value="78">Yvelines</option>
+                        <option value="79">Deux-Sèvres</option>
+                        <option value="80">Somme</option>
+                        <option value="81">Tarn</option>
+                        <option value="82">Tarn-et-Garonne</option>
+                        <option value="83">Var</option>
+                        <option value="84">Vaucluse</option>
+                        <option value="85">Vendée</option>
+                        <option value="86">Vienne</option>
+                        <option value="87">Haute-Vienne</option>
+                        <option value="88">Vosges</option>
+                        <option value="89">Yonne</option>
+                        <option value="90">Territoire de Belfort</option>
+                        <option value="91">Essonne</option>
+                        <option value="92">Hauts-de-Seine</option>
+                        <option value="93">Seine-Saint-Denis</option>
+                        <option value="94">Val-de-Marne</option>
+                        <option value="95">Val-d'Oise</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="sexePassenger">Sexe (optionnel) :</label>
+                    <select id="sexePassenger">
+                        <option value="" disabled selected>Sélectionnez</option>
+                        <option value="male">Homme</option>
+                        <option value="female">Femme</option>
+                        <option value="other">Autre</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="styleConduite">Style de Conduite du Pilote :</label>
+                    <select id="styleConduite">
+                        <option value="calme">Calme</option>
+                        <option value="sportif">Sportif</option>
+                        <option value="agressif">Agressif</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="styleMotoPassenger">Style de moto (optionnel) :</label>
+                    <select id="styleMotoPassenger">
+                        <option value="" disabled selected>Sélectionnez un style de moto</option>
+                        <option value="gt">GT</option>
+                        <option value="trail">Trail</option>
+                        <option value="custom">Custom</option>
+                        <option value="routière">Routière</option>
+                        <option value="sportive">Sportive</option>
+                        <option value="roadster">Roadster</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit">Rechercher</button>
+        </form>
+    </div>
+
+    <script src="recherche.js"></script>
+</body>
+</html>

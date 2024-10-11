@@ -1,9 +1,17 @@
-document.getElementById('hamburger-menu').addEventListener('click', function() {
-    var menu = document.getElementById('menu');
-    if (menu.style.display === 'block') {
-        menu.style.display = 'none';
+// Écouteur d'événement pour le changement de type d'utilisateur
+document.getElementById('userType').addEventListener('change', function() {
+    var pilotFields = document.getElementById('pilotFields');
+    var passengerFields = document.getElementById('passengerFields');
+
+    if (this.value === 'pilot') {
+        pilotFields.style.display = 'block';
+        passengerFields.style.display = 'none';
+    } else if (this.value === 'passenger') {
+        passengerFields.style.display = 'block';
+        pilotFields.style.display = 'none';
     } else {
-        menu.style.display = 'block';
+        pilotFields.style.display = 'none';
+        passengerFields.style.display = 'none';
     }
 });
 

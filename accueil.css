@@ -1,5 +1,4 @@
-/* styles.css */
-
+/* Styles globaux */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -70,48 +69,24 @@ nav {
     background-color: #0056b3; /* Couleur de fond au survol */
 }
 
-.content {
+main {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    margin-top: 60px; /* pour éviter que le contenu soit masqué par le nav */
+    height: calc(100vh - 60px); /* Ajuster la hauteur pour le menu */
+    margin-top: 60px; /* Éviter que le contenu soit masqué par le menu */
 }
 
-.content form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.content {
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.content label {
-    font-weight: bold;
-}
-
-.content input[type="text"],
-.content input[type="file"],
-.content select {
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    width: 100%;
-}
-
-.content button {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.content button:hover {
-    background-color: #0056b3;
-}
-
-img {
-    max-width: 200px;
-    margin-top: 10px;
+ol {
+    list-style-position: inside; /* Pour que les numéros soient à l'intérieur */
+    padding: 0; /* Supprime le padding par défaut */
+    text-align: center; /* Centre le texte */
 }

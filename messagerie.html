@@ -3,38 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BuddyRider - Accueil</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Messagerie - BuddyRider</title>
     <link rel="stylesheet" href="messagerie.css">
 </head>
 <body>
-    <header>
-        <div class="hamburger" id="hamburger">
-            &#9776; <!-- Icône hamburger -->
+    <nav>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <div class="hamburger-bar"></div>
+            <div class="hamburger-bar"></div>
+            <div class="hamburger-bar"></div>
         </div>
-        <nav id="menu" class="hidden">
+        <div class="menu" id="menu">
             <ul>
-                <li><a href="homepage.html">Accueil</a></li>
-                <li><a href="profile.html">Création de Profil</a></li>
-                <li><a href="search.html">Recherche Pilote/Passager</a></li>
+                <li><a href="accueil.html">Accueil</a></li>
+                <li><a href="profile.html">Profil</a></li>
+                <li><a href="recherche.html">Recherche de pilote</a></li>
                 <li><a href="messagerie.html">Messagerie</a></li>
-                <li><hr></li> <!-- Ligne de séparation -->
-                <li><a href="#" id="logout-btn" class="logout-btn">Déconnexion</a></li> <!-- Bouton de déconnexion -->
+                <li><a href="notifications.html">Notifications</a></li>
+                <li class="logout"><a href="index.html">Déconnexion</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <main>
-        <div id="messaging-container" class="messaging-container">
-            <h2>Messagerie</h2>
-            <div id="message-list" class="message-list"></div>
-            <div class="message-input">
-        <input type="text" id="message-input" placeholder="Écrivez un message..." />
-        <button id="send-button">Envoyer</button>
+    <div class="container">
+        <h1>Messagerie</h1>
+        <div id="messages">
+            <!-- Message envoyé -->
+            <div class="message sent">
+                <div class="sender">
+                    <a href="profile.html?id=1">Moi</a>
+                </div>
+                <div class="content">
+                    <p>Bonjour, j'aimerais savoir si tu es disponible pour une sortie !</p>
+                    <span class="timestamp">Envoyé le 11 octobre 2024 à 14:35</span>
+                </div>
+            </div>
+            <!-- Message reçu -->
+            <div class="message received">
+                <div class="sender">
+                    <a href="profile.html?id=2">Utilisateur2</a>
+                </div>
+                <div class="content">
+                    <p>Salut, où souhaites-tu aller ?</p>
+                    <span class="timestamp">Envoyé le 11 octobre 2024 à 15:10</span>
+                </div>
+            </div>
+            <!-- Ajoutez d'autres messages ici -->
+        </div>
     </div>
-</div>
 
-<script src="homepage.js"></script>
-
+    <script src="messagerie.js"></script>
 </body>
 </html>
